@@ -1,0 +1,22 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block search %}
+<h3>Search for {{searched}}</h3><br>
+<div class="row m-1">
+  {% for product in keys %}
+  <div class="col-lg-3 mb-2">
+    <div class="card fixed-height-card">
+      <img src="{{product.ImageURL}}"" class="fixed-height-img rounded-top" alt="{{product.name}}">
+      <div class="card-body p-3">
+        <h5 class="card-title fixed-height-body">{{product.name}}</h5>
+        <h3><strong>{{product.price | floatformat:2}}$</strong></h3>
+      </div>
+      <div class="card-body p-3 pt-0">
+        <button data-product={{product.id}} data-action="add" class="btn-outline-dark btn add-btn update-cart">Thêm vào giỏ hàng</button>
+        <a href="{% url 'detail' %}?id={{product.id}}" class="btn-success btn add-btn">Xem</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock search %}
