@@ -70,16 +70,16 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link hover_item" href="#">Giới thiệu</a>
+              <a class="nav-link hover_item" href="{% url 'introduce' %}">Giới thiệu</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link hover_item" href="#">Liên hệ</a>
+              <a class="nav-link hover_item" href="{% url 'contact' %}">Liên hệ</a>
             </li>
           </ul>
           <form class="d-flex m-2" role="search" method="POST" action="{% url 'search' %}">
             {% csrf_token %}
             <input class="form-control me-2 shadow-sm" type="search" placeholder="Search" aria-label="Search" name="searched">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button class="btn final-button" type="submit">Search</button>
           </form>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             {% if request.user.is_anonymous%}
@@ -127,6 +127,8 @@
     {% block category %}{% endblock category %}
     <!--detail page-->
     {% block detail_page %}{% endblock detail_page %}
+    {% block introduce %}{% endblock introduce %}
+    {% block contact %}{% endblock contact %}
     <br><br><br>
     <!-- footer -->
     <footer class="text-center text-bg-dark p-3 fixed-bottom">

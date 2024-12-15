@@ -82,7 +82,7 @@ def loginPage(request):
     password = request.POST.get('password')
     user = authenticate(request,username=username,password=password)
     if user is not None:
-      login(request,user) 
+      login(request,user)
       return redirect('home')
     else: messages.info(request,'User or password not correct')
   context = {}
@@ -169,18 +169,23 @@ def updateItem(request):
   if (action == 'add'):
     if(product.remaining_quantity>0):
       orderItem.quantity +=1
-      product.purchased_quantity+=1     
+      product.purchased_quantity+=1
       product.save()
   elif action == 'remove':
     orderItem.quantity -=1
-    product.purchased_quantity-=1 
+    product.purchased_quantity-=1
     product.save()
   orderItem.save()
   if orderItem.quantity<=0:
     orderItem.delete()
   return JsonResponse('added',safe=False)
 
+def contact(request):
+  return render(request, 'app/contact.html')
+
+def introduce(request):
+  return render(request, 'app/introduce.html')
+
 def manage(request):
   return render(request,'app/admin')
 
-  

@@ -1,0 +1,39 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Cửa hàng giày bóng đá Huế{% endblock %}
+
+{% block introduce %}
+<div class="container my-5">
+    <!-- Hero Section -->
+    <div class="row align-items-center bg-light rounded shadow-lg p-5">
+        <div class="col-lg-6">
+            <h1 class="display-4 text-primary fw-bold">FourFood - Nhanh, Ngon, Chất lượng</h1>
+            <p class="lead mt-4 text-muted">
+                Biến mỗi bữa ăn của bạn trở thành trải nghiệm đáng nhớ! FourFood mang đến dịch vụ giao đồ ăn nhanh, chất lượng, và tiện lợi từ những quán ăn và nhà hàng yêu thích nhất.
+            </p>
+            <ul class="list-unstyled mt-4">
+                <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <span class="fw-semibold">Thực đơn đa dạng:</span> Từ món ăn đường phố đến ẩm thực cao cấp.
+                </li>
+                <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <span class="fw-semibold">Giao hàng siêu tốc:</span> Nóng hổi tận tay chỉ trong 30 phút.
+                </li>
+                <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <span class="fw-semibold">Thanh toán linh hoạt:</span> Hỗ trợ mọi hình thức, từ tiền mặt đến ví điện tử.
+                </li>
+                <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <span class="fw-semibold">Hỗ trợ tận tình:</span> Dịch vụ khách hàng 24/7 sẵn sàng giúp đỡ bạn.
+                </li>
+            </ul>
+            <a href="{% url 'home' %}" class="btn btn-danger btn-lg mt-4 shadow-sm">
+                Đặt món ngay <i class="bi bi-arrow-right-circle ms-2"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock introduce %}

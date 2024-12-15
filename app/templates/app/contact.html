@@ -1,0 +1,49 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Liên hệ - Cửa hàng giày bóng đá Huế{% endblock %}
+
+{% block contact %}
+<div class="container my-5">
+    <h2 class="text-center text-primary mb-4 fw-bold">Liên hệ với FourFood Huế</h2>
+    <p class="text-center text-muted fs-5">
+        Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn. Hãy liên hệ với FourFood Huế để trải nghiệm dịch vụ giao đồ ăn nhanh tốt nhất!
+    </p>
+    <br>
+    <!-- Contact Information -->
+    <div class="row justify-content-center">
+        <!-- Contact Details -->
+        <div class="col-md-4 mb-4">
+            <h4 class="text-center text-success fw-bold">Thông tin liên hệ</h4>
+            <p class="fs-6">
+                <strong>Địa chỉ:</strong> 45 Bà Triệu, Phường Phú Hội, Thành phố Huế<br>
+                <strong>Điện thoại:</strong> <a href="tel:0845678910">0845 678 910</a> - <a href="tel:0234567890">0234 567 890</a><br>
+                <strong>Email:</strong> <a href="mailto:lienhe@fourfoodhue.com">lienhe@fourfoodhue.com</a>
+            </p>
+        </div>
+        <!-- Working Hours -->
+        <div class="col-md-4 mb-4 text-center">
+            <h4 class="text-center text-success fw-bold">Giờ làm việc</h4>
+            <ul class="list-unstyled fs-6">
+                <li><strong>Thứ 2 - Thứ 6:</strong> 7:00 - 21:30</li>
+                <li><strong>Thứ 7, Chủ nhật:</strong> 8:00 - 20:30</li>
+            </ul>
+        </div>
+        <!-- Social Media -->
+        <div class="col-md-4 mb-4 text-center">
+            <h4 class="text-center text-success fw-bold">Kết nối với chúng tôi</h4>
+            <div class="d-flex justify-content-center">
+                <a href="https://www.facebook.com/" class="btn btn-outline-primary btn-sm me-2">
+                    <i class="bi bi-facebook"></i> Facebook
+                </a>
+                <a href="https://www.instagram.com/" class="btn btn-outline-primary btn-sm me-2">
+                    <i class="bi bi-instagram"></i> Instagram
+                </a>
+                <a href="https://twitter.com/" class="btn btn-outline-primary btn-sm">
+                    <i class="bi bi-twitter"></i> Twitter
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock contact %}
+

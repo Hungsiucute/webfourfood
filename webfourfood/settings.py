@@ -26,9 +26,9 @@ SECRET_KEY = 'django-insecure-m9!f($t-a%_evl$i!j%s8la*4*w)fzvtlv(+j_fqxn+t(8dh0y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['5904-14-165-194-161.ngrok-free.app','127.0.0.1']
+ALLOWED_HOSTS = ['vanhungnguyen7179.pythonanywhere.com']
 CSRF_TRUSTED_ORIGINS = [
-    'https://*.ngrok-free.app',
+    'https://vanhungnguyen7179.pythonanywhere.com',
 ]
 
 # Application definition
@@ -80,10 +80,11 @@ WSGI_APPLICATION = 'webfourfood.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'webfourfood',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
+        'NAME': 'vanhungnguyen717$webfourfood',  # Tên cơ sở dữ liệu đầy đủ
+        'USER': 'vanhungnguyen717',                     # Tên người dùng đã rút gọn
+        'PASSWORD': 'titeo12345',                    # Mật khẩu của bạn
+        'HOST': 'vanhungnguyen7179.mysql.pythonanywhere-services.com',
+        'PORT': '3306',                                 # Cổng MySQL mặc định
     }
 }
 
@@ -132,5 +133,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'app/static')
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/image/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'app/static/app/images')
